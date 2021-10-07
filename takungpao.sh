@@ -1,7 +1,7 @@
 mkdir dg
 cd dg
 rm *
-download_cmd="aria2c 'http://paper.takungpao.com/resfile/PDF/$1/ZIP/$1_pdf.zip'"
+download_cmd="curl -o $1_pdf.zip 'http://paper.takungpao.com/resfile/PDF/$1/ZIP/$1_pdf.zip'"
 echo $download_cmd
 eval $download_cmd
 unzip $1_pdf.zip
